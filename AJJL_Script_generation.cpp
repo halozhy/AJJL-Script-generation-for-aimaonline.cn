@@ -48,9 +48,14 @@ int main()
         if (tag == 1)
         {
             temp = s[i];
+            if (temp[len-1]=='\"')
+            {
+                temp.insert(len, y);
+            }
+            
             for (j = 0; j < len; j++)
             {
-                if (temp[j] == '\"')
+                if (temp[j] == '\"'||((int)temp[j]==34))
                 {
                     temp.insert(j, y);
                     // cout << j << endl << temp << endl;
